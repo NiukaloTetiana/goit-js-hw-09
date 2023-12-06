@@ -40,7 +40,7 @@ refs.startBtn.addEventListener('click', () => {
 
   intervalId = setInterval(() => {
     const nowTime = selectedDate.getTime() - new Date().getTime();
-    if (selectedDate - nowTime <= 1000) {
+    if (nowTime <= 1000) {
       clearInterval(intervalId);
     }
     const timer = convertMs(nowTime);
